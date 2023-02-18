@@ -1,0 +1,327 @@
+@import 'variables';
+
+
+/*************** reset *********************/ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+};
+
+body, html{
+    @include para-Regular();
+    background-color:$n-black-squeeze;
+}
+a{
+    text-decoration: none;
+    transition: none!important;
+    color: inherit;
+    border-style: none;
+    border-color: none;
+    border: none!important;
+}
+
+h1{
+    @include h1desktop();
+}
+
+h2{
+    @include h2desktop();
+}
+
+p{
+    @include para-Regular();
+}
+ul,li{
+    list-style: none;
+}
+/*************** reset ends ******************/ 
+
+
+/*************** buttons *********************/ 
+.buttons-g{
+    width: 180px;
+    height: 40px;
+    background-color:$p-copper-brown !important;
+    color: white!important;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        opacity: .65;
+    }
+
+}
+
+/*************** buttons  ends ****************/ 
+
+
+/*********** navigation bar start here ********/ 
+
+nav{
+    @include para-Small();
+}
+.active, .nav-item:hover{
+    opacity: .95;
+    color: white;
+    border-radius: 10px;
+    background-color:$p-copper-brown ;
+}
+.nav-link{
+    text-align: center;
+}
+.nav-item{
+    border-radius: 10px;
+}
+
+/************ Navigation Bar Ends here **********/ 
+
+
+/*************** Start of Home ****************/ 
+/* Home*/
+#home{
+    overflow-y: hidden;
+}
+.pinay{
+    background: linear-gradient(107.03deg, #FFF4BC 1.59%, rgba(153, 103, 14, 0) 60.03%),url('../images/articles.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center; 
+}
+
+.pinay-p{
+    position: relative;
+}
+.grabber{
+    height: 200px;
+}
+.inner{
+    max-width: 25rem;
+}
+
+.inner img{
+    height: auto;
+    width:25rem; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(15px 10px 0px #AC843C);
+    border-radius: 10px;
+}
+
+.picBorder{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 12.5rem;
+}
+.bg-squeeze{
+    background-color: $n-black-squeeze;
+}
+.box-design, .box-design1{
+    display: block;
+    background-color: $p-cream-can;
+    position: relative;
+    z-index: -2;
+    top: auto;
+}
+
+.box-design{
+    right: 50px;
+    top: 100px;
+    height: 6rem;
+}
+.box-design1{
+    right: 110px;
+    top: -50px;
+    height: 4rem;
+}
+
+/*************** End of Home ****************/ 
+
+
+/*************** Start of Why Us ****************/ 
+.client{
+    @include dflexCenter(column)
+}
+.card{
+    @include dflexCenter(none);
+    @include RegularDropShadow();
+}
+.card p{
+    text-align: justify;
+}
+
+/*************** End of Why US ****************/
+
+/*************** Start of About Us ****************/ 
+.profile img{
+    @include strongRightAndDown();
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:300px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.profile{
+    padding: 0;
+}
+
+.About-Us h1 p{
+    text-align: justify;
+}
+/*************** End of About US ****************/ 
+/*************** Start of Affluent Stories *************/ 
+
+.search{
+    @include heavyDropShadow();
+    border-radius: 10px;
+    padding:0;
+    gap: 0;
+}
+.cards-articles{
+    border-bottom: 2px solid;
+    border-color:  #D4C36B;
+    padding: 2rem;
+}
+.cards-content{
+    border-radius: 10px;
+}
+.catDate{
+    @include para-Small();
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+}
+.title{
+    @include h1mobile();
+}
+.description{
+    @include para-LightReg();
+    height: 60px;
+    text-overflow: ellipsis;
+}
+.desCard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
+/****** Affluent Stories Articles start************/
+@mixin bgCover(){
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;  
+}
+.cover{
+    background: url('../images/happy-young-asian-couple-realtor-agent.jpg'); 
+    @include bgCover();
+}
+
+.cover1{
+    background: url('../images/hands-holding-tablet-close-up.jpg');
+    @include bgCover();
+}
+.cover2{
+    background: url('../images/thoughtful-businesswoman-korean-corporate-woman-showing-credit-card-money-cash-dollars-hands-standing-white-background-thinking.jpg');
+    @include bgCover();
+    background-position-y: center;
+}
+#contentArticle{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+/********* End of Affluent Stories ***********/ 
+
+
+/*************** Start of opt-in ****************/
+.opt-in{
+    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.25)) drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    background-color: $n-black-squeeze;
+}
+main{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container-lg .col-lg-6 .row article {
+    width: 300px;
+}
+/*************** End of opt-in ****************/
+
+/*************** Start of Get a quote *************/
+.form-card, tbody{
+    border: 2px solid #AC843C;
+    border-radius: 10px;
+} 
+ 
+input{
+    border: #AC843C solid 2px;
+    border-radius: 10px;
+    &:hover{
+        transition: all ease hsla(50, 55%, 63%, 1);
+    }
+
+}
+/*************** End of Get a quote ***************/  
+/*************** Start of Footer ***************/ 
+.liWork:hover{
+    text-decoration: underline solid 2px;
+    transition: all ease-in .4s;
+    left: auto;
+} 
+
+#footer .mt-5 .row .col .logo a .img{
+    width: 20rem;
+}
+/*************** End of Footer ***************/  
+
+@media (max-width: 900px)
+ { 
+    h1{
+        @include h1mobile
+    }
+    h2{
+        @include h2mobile
+    }
+    .inner img{
+        width:18.75rem;
+    }
+    .profile{
+        padding: 1rem .5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .main-opt{
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    }
+ }
+
+ @media (max-width:375px){
+    .pinay{
+        height: 500px;
+    }
+    .inner img{
+        width:15rem;
+    }
+    .grabber{
+        height: auto;
+    }
+    .card{
+        @include para-Small();
+    }
+    .client{
+        margin-bottom: 2rem;
+    }
+ }
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
